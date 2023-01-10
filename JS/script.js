@@ -24,13 +24,17 @@ const numberOfFilms = prompt('сколько фильмов вы уже посм
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
+    actors: {},
     genres: [],
     privat: false
 };
 
 const anyFilm = prompt('Один из последних просмотренных фильмов?', ''),
-      filmReiting = prompt('На сколько оцените его?');
+      filmReiting = prompt('На сколько оцените его?'),
+      anyFilm2 = prompt('Один из последних просмотренных фильмов?', ''),
+      filmReiting2 = prompt('На сколько оцените его?');
 
-personalMovieDB.movies.anyFilm  = filmReiting; 
+personalMovieDB.movies[anyFilm]  = filmReiting; 
+personalMovieDB.movies[anyFilm2]  = filmReiting2;
 
 console.log(personalMovieDB);
